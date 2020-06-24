@@ -1,0 +1,15 @@
+
+html {
+  font-size : $base-font---smallest;
+  @include min-width(560px) { font-size : $base-font---small; }
+  @include min-width(1024px) { font-size : $base-font---largest; }
+}
+body, p {
+  font-size : 1em;
+}
+body, p {
+  line-height : 1.5;
+}
+a, li, ul, input, label, #{$button-like-elements} {
+  font-size : 1em;
+}

@@ -1,0 +1,22 @@
+
+
+
+%list-reset {
+  padding : 0;
+  margin : 0;
+  list-style: none;
+  transition: $default-transition;
+  position : relative;
+  li {
+    position : relative;
+    padding : 0;
+    margin : 0;
+    list-style: none;
+    transition: $default-transition;
+  }
+}
+
+a {
+  text-decoration : none;
+}
+

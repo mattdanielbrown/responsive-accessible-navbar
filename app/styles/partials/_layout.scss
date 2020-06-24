@@ -1,0 +1,127 @@
+/* =============================================================================
+ *  _layout.scss
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *   Styles main page layout and layout of major page regions / components,
+ *   and other elements that mostly remain present on the screen, no matter
+ *   which page is currently active (e.i., <nav>, <main>, <header>, etc.)
+ * ========================================================================== */
+
+
+// Responsive Container Class
+//------------------------------------------------------------------------------
+.container {
+  margin    : 0 auto;
+  max-width : 768px;
+  width     : 90%;
+  @include min-width(1024px) { max-width : $container-maxwidth--md; }
+  @include min-width(1200px) { max-width : $container-maxwidth--lg; }
+}
+
+// Base / Resets
+//------------------------------------------------------------------------------
+*, *::before, *::after, *:before, *:after, :root {box-sizing : inherit !important;}
+//------------------------------------------------------------------------------
+html {
+  background-color : $viewport-background-color;
+  box-sizing       : border-box;
+}
+html, body {
+  height     : 100%;
+  margin     : 0 !important;
+  max-width  : 100vw;
+  min-height : 100vh;
+  min-width  : 320px;
+  padding    : 0 !important;
+  position   : relative;
+  width      : 100vw;
+  transition : $default-transition;
+  * { transition : $default-transition; }
+}
+body {
+  //-webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
+  display         : flex;
+  flex-direction  : column;
+  font-size       : 1em;
+  justify-content : space-between;
+  line-height     : 1.5;
+  background      : $body-background-color;
+}
+
+// Page Regions
+//------------------------------------------------------------------------------
+[role=navigation], [role=banner], [role=main], [role=contentinfo] {
+  position : relative;
+  transition: $default-transition;
+  width : 100%;
+  min-width : 100vw;
+  max-width : 100vw;
+  display : block;
+  margin : 0;
+  padding : 0;
+}
+//------------------------------------------------------------------------------
+[role=navigation] {
+  background : $navigation-background-color;
+  margin : 0 !important;
+  padding : 0 !important;
+}
+[role=banner] {
+  background : $alt-body-background-color;
+  padding : 2em 0;
+  hgroup {
+    @extend .container;
+    #{$headings-elements} {
+      line-height : 1.5;
+      margin : 0;
+      padding : 0;
+    }
+  }
+}
+[role=main] {
+  background : $body-background-color;
+  padding : 1em 0;
+  flex-grow : 1;
+  section, article, & > * {
+    @extend .container;
+    padding : 1em 0;
+    margin-bottom : 2em;
+  }
+}
+[role=contentinfo] {
+  background : $alt-body-background-color;
+  padding : 2em 0;
+  text-align : center;
+  p {
+    font-size : small;
+    text-align : center;
+    margin : auto 0;
+    padding : 0;
+    line-height : 1;
+    color: gray;
+    font-weight : 500;
+  }
+}
+
+// Lists
+ul {
+  @extend %list-reset;
+  display : block;
+  width : 100%;
+  vertical-align : middle;
+  li {
+    display : block;
+    width : 100%;
+    margin-bottom : 1em;
+  }
+  @include min-width(600px) {
+    li {
+      margin-bottom : unset;
+      width : unset;
+      display : inline-block;
+      margin-left : 1em;
+      vertical-align : middle;
+    }
+  }
+
+}

@@ -1,0 +1,55 @@
+
+
+
+nav {
+
+}
+nav ul {
+
+}
+nav li {
+  width : unset;
+  display : unset;
+}
+nav a {
+  color: $navigation-text-color;
+  background-color: $navigation-background-color;
+  font-weight : 600;
+  letter-spacing : .5px;
+  text-align : center;
+  width : 100%;
+  display : block;
+  line-height : 1;
+  padding : 1em 0;
+
+  transition: $default-transition;
+  &:hover {
+    background : shade($navigation-background-color, 5%);
+  }
+  &:focus {
+    background : shade($navigation-background-color, 10%);
+  }
+  &:active {
+    background : shade($navigation-background-color, 20%);
+  }
+}
+
+nav {
+  @include min-width(600px) {
+    ul {
+      display : flex;
+      flex-direction : row;
+      align-items : center;
+      align-content : center;
+      justify-content : flex-end;
+    }
+    li {
+      display : inline-block;
+    }
+    a {
+      width : auto;
+      padding :1.5em;
+      font-size : 18px
+    }
+  }
+}

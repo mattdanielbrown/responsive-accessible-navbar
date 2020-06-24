@@ -1,0 +1,56 @@
+/* =============================================================================
+ *  _varialbes.scss
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *   Defines variables used, both SCSS and CSS `--var` custom properties,
+ *   as well as the fallback defaults, and other configuration settings.
+ * ========================================================================== */
+
+//——————————————————————————————————————————————————————————————————————————————
+// Colors
+//——————————————————————————————————————————————————————————————————————————————
+$viewport-background-color   : #333333;
+$navigation-background-color : $viewport-background-color;
+$navigation-text-color       : #ffffff;
+$body-background-color       : #efefef;
+$alt-body-background-color   : #e9e9f2;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Sizes
+//——————————————————————————————————————————————————————————————————————————————
+
+// Margins
+$em-spacer                   : 1em;
+$rem-spacer                  : 1rem;
+$two-em-spacer               : 2em;
+$two-rem-spacer              : 2rem;
+$three-em-spacer             : 3em;
+$three-rem-spacer            : 3rem;
+$four-em-spacer              : 4em;
+$four-rem-spacer             : 4rem;
+$eight-em-spacer             : 8em;
+$eight-rem-spacer            : 8rem;
+
+// Widths
+$container-maxwidth--sm      : 768px;
+$container-maxwidth--md      : 900px;
+$container-maxwidth--lg      : 960px;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Selector Lists
+//——————————————————————————————————————————————————————————————————————————————
+$headings-elements           : ("h1, h1, h2, h3, h4, h5");
+$button-like-elements        : ("button, [role=button], [type=button], [type=reset], [type=submit]");
+
+//——————————————————————————————————————————————————————————————————————————————
+// Typogarphy
+//——————————————————————————————————————————————————————————————————————————————v
+$base-font---smallest: 18px;
+$base-font---small   : 21px;
+$base-font---largest : 24px;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Other
+//——————————————————————————————————————————————————————————————————————————————
+$default-transition         : all 150ms;
+
+$main-color: #6a00ff;
