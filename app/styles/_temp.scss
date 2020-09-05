@@ -16,7 +16,7 @@ $navigation-background-color: #444444;
 
 $action-color								: #5e44ff;
 $action-color								: #5c1fff;
-$main-color: #6a00ff;
+$main-color                 : #6a00ff;
 
 $primary-color							: $action-color;
 $secondary-color						: #444444;
@@ -102,6 +102,8 @@ $icon-color-four						: #1bDF69      				!default;
 
 // =================================================
 
+
+// Resets and base -------------------------------------------------------------
 *,*:before,*:after {
   box-sizing: inherit !important;
 }
@@ -140,6 +142,7 @@ body {
   }
 }
 
+// Typography —————-------------------------------------------------------------
 body, p {
   color: #333333;
   line-height: 1.5;
@@ -153,6 +156,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
+// Page Regions ----------------------------------------------------------------
 main {
   flex-grow: 1;
   padding: 1rem 0;
@@ -175,25 +179,28 @@ main {
 }
 [role="contentinfo"] {
   text-align: center;
-  font-size: small;
   font-weight: 500;
   letter-spacing: 0.5px;
   color: gray;
-  padding: 2em 0;
+  padding: 2rem 0;
   margin: 0;
   p {
     line-height: 1;
     padding: 0;
     margin: 0 auto;
+    text-align : center;
+    font-size: small;
   }
 }
 
+// Lists (Resets) --------------------------------------------------------------
 ul, li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+// Naviagation Bar -------------------------------------------------------------
 nav {
   background: $navigation-background-color;
   margin: 0;
@@ -280,6 +287,7 @@ nav {
   }
 }
 
+// Buttons ---------------------------------------------------------------------
 .button-list {
   transition: all 120ms;
   transition-delay: 50ms;
@@ -349,7 +357,7 @@ button, [role=button], [type=button],
     &:focus {
       $_color: shade( $_this-color, 15%);
       background: $_color;
-      border-color: $_color;
+      //border-color: $_color;
       border-color: shade( $_this-color, 35%);
       // border-color: $primary-color;
       box-shadow: $box-shadow-1, 0 0 0 3px rgba($primary-color, 0.3);
@@ -377,7 +385,7 @@ button, [role=button], [type=button],
     }
     &:focus {
       $_color: shade( $_this-color, 10%);
-      background: rgba($default-color, 0.25);
+      //background: rgba($default-color, 0.25);
       background: rgba($primary-color, 0.125);
       border-color: $primary-color;
       // color: $primary-color;
@@ -478,10 +486,12 @@ button, [role=button], [type=button],
   }
 }
 
+// List Resets 2 ---------------------------------------------------------------
 nav, nav *, button, .button-list, .button-list * {
   user-select : none;
 }
 
+// :Root Styles ----------------------------------------------------------------
 :root {
   $main-color: #6a00ff;
   //background-color : $main-color;
